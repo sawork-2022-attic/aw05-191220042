@@ -5,9 +5,19 @@ spring:
   application:
     name: pos-products
 
+  cache:
+    ehcache:
+      config: classpath:/ehcache.xml
+    type:
+      simple
+
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8081/eureka
+
+
+
+
